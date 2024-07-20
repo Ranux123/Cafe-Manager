@@ -4,15 +4,6 @@
   <component name="GitLabDefaultAccount">
     <option name="defaultAccountId" value="9248de76-9267-48e9-acae-d345f0fdf400" />
   </component>
-  <component name="MaterialThemeProjectNewConfig">
-    <option name="metadata">
-      <MTProjectMetadataState>
-        <option name="migrated" value="true" />
-        <option name="pristineConfig" value="false" />
-        <option name="userId" value="-50649feb:18f998cdcb0:-7ffe" />
-      </MTProjectMetadataState>
-    </option>
-  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
