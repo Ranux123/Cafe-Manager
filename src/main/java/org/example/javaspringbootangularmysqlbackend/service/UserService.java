@@ -1,6 +1,5 @@
 package org.example.javaspringbootangularmysqlbackend.service;
 
-import org.apache.coyote.Response;
 import org.springframework.http.ResponseEntity;
 
 import java.util.Map;
