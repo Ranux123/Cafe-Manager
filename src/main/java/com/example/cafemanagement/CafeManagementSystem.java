@@ -18,4 +18,8 @@ package com.example.cafemanagement;
  */
 public class CafeManagementSystem
 {
+    public static void main( String[] args )
+    {
+
+    }
 }
