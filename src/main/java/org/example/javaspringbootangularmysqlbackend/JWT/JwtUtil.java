@@ -7,6 +7,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
@@ -48,7 +49,14 @@ public class JwtUtil
         }
     }
 
-    private String generateToken (String subject, Map<String, Object> claims)
+    public String generateToken (String username, String role)
+    {
+        Map<String, Object> claims = new HashMap<>();
+        claims.put( "role", role );
+        return createToken( username, claims );
+    }
+
+    private String createToken (String subject, Map<String, Object> claims)
     {
         return Jwts.builder()
                        .setClaims(claims)
