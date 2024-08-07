@@ -49,21 +49,21 @@ public class JwtUtil
         }
     }
 
-    public String generateToken (String username, String role)
+    public String generateToken( String username, String role )
     {
-        Map<String, Object> claims = new HashMap<>();
+        Map<String,Object> claims = new HashMap<>();
         claims.put( "role", role );
         return createToken( username, claims );
     }
 
-    private String createToken (String subject, Map<String, Object> claims)
+    private String createToken( String subject, Map<String,Object> claims )
     {
         return Jwts.builder()
-                       .setClaims(claims)
-                       .setSubject(subject)
-                       .setIssuedAt( new Date(System.currentTimeMillis()) )
-                       .setExpiration( new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 10) )
-                       .signWith( SignatureAlgorithm.HS256, secret ).compact();
+                   .setClaims( claims )
+                   .setSubject( subject )
+                   .setIssuedAt( new Date( System.currentTimeMillis() ) )
+                   .setExpiration( new Date( System.currentTimeMillis() + 1000 * 60 * 60 * 10 ) )
+                   .signWith( SignatureAlgorithm.HS256, secret ).compact();
 
     }
 
