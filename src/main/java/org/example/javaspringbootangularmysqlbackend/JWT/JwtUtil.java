@@ -11,6 +11,12 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
+/**
+ * <b>Jwt Util</b>
+ * Utility class for handling JWT (JSON Web Token) operations such as token generation, extraction, and validation.
+ *
+ * @since 20 Jul 2024
+ */
 @Service
 public class JwtUtil
 {
@@ -67,7 +73,7 @@ public class JwtUtil
 
     }
 
-    public Boolean methodValidateToken( String token, UserDetails userDetails )
+    public Boolean validateToken( String token, UserDetails userDetails )
     {
         final String username = extractUsername( token );
         if( username.equals( userDetails.getUsername() ) && !isTokenExpired( token ) )
@@ -79,6 +85,4 @@ public class JwtUtil
             return false;
         }
     }
-
-    //Continue from the 15 min mark
 }
