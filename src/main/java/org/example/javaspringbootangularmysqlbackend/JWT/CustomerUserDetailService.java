@@ -22,7 +22,7 @@ public class CustomerUserDetailService implements UserDetailsService
     private org.example.javaspringbootangularmysqlbackend.POJO.User userDetail;
 
     @Override
-    public UserDetails loadUserByUsername( String username ) throws UsernameNotFoundException
+    public UserDetails loadUserByUsername( String username ) throws  UsernameNotFoundException
     {
         log.info( "Inside loadUserByUsername {}", username );
         userDetail = userDao.findByEmailId( username );
