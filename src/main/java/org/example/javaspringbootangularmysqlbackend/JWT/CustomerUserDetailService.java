@@ -38,6 +38,8 @@ public class CustomerUserDetailService implements UserDetailsService
 
     public org.example.javaspringbootangularmysqlbackend.POJO.User getUserDetail()
     {
+        org.example.javaspringbootangularmysqlbackend.POJO.User user = userDetail;
+        user.setPassword( null );
         return userDetail;
     }
 }
